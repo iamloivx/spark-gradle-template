@@ -47,6 +47,14 @@ dependencies {
     compile 'org.apache.spark:spark-core_2.11:2.1.0'
 
     compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    	// https://mvnrepository.com/artifact/com.twosigma/flint
+    compile group: 'com.twosigma', name: 'flint', version: '0.6.0'
+    compile group: 'com.cloudera.sparkts', name: 'sparkts', version: '0.4.1'
+	// // https://mvnrepository.com/artifact/io.sqooba.oss/scala-timeseries-lib
+    // compile group: 'io.sqooba.oss', name: 'scala-timeseries-lib_2.13', version: '1.3.1'
+    // https://mvnrepository.com/artifact/io.github.carldata/timeseries
+    compile group: 'io.github.carldata', name: 'timeseries_2.11', version: '0.6.7'
+
 }
 
 task run(type: JavaExec, dependsOn: classes) {
