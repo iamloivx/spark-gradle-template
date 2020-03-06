@@ -12,7 +12,7 @@ import org.apache.spark.sql.{DataFrame, Row, SQLContext}
 import org.apache.spark.sql.types._
 import org.apache.spark.util.StatCounter
 
-object Main extends InitSpark {
+object SparkTS extends InitSpark {
   def loadObservations(sqlContext: SQLContext, path: String): DataFrame = {
     val rowRdd = sqlContext.sparkContext.textFile(path).map { line =>
       val tokens = line.split('\t')
